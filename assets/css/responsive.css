@@ -30,6 +30,13 @@
 	.navbar-custom .dropdown-menu{
 		margin-left: 20px;
 	}
+	
+	.navbar-nav a:after {
+		transform: unset;
+	}
+	.navbar-nav a:hover:after {
+		transform: unset;
+	}
 
 	/*about me section*/
 	.biography {
@@ -306,6 +313,13 @@
 	.navbar-custom .navbar-nav .dropdown-menu > li > a{
 		font-size: 12px;
 		padding: 15px;
+	}
+
+	.navbar-nav a:after {
+		transform: unset;
+	}
+	.navbar-nav a:hover:after {
+		transform: unset;
 	}
 
 	/*about me section*/

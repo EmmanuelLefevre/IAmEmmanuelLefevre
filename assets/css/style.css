@@ -258,11 +258,6 @@ ul, ol {
     list-style : none
 }
 
-
-ul.list-check {
-    
-}
-
 ul.list-check li{
     position: relative;
     font-size: 18px;
@@ -317,7 +312,7 @@ ul.list-check li::before {
 
 
 #home {
-	background: url(../images/background-banner.jpg) no-repeat center center;
+	background: url(../images/background-banner-ayutthaya.jpg) no-repeat center center;
 	-webkit-background-attachment: fixed;
     background-attachment: fixed;
 	background-color: #222;
@@ -327,7 +322,7 @@ ul.list-check li::before {
 }
 #home:before {
 	content: "";
-	background-color: rgba(85, 89, 95, 0.85);
+	background-color: rgba(85, 89, 95, 0.5);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -440,6 +435,22 @@ SOCIAL ICON
     height: 2px;
     bottom: 1px;
     left: 0;
+}
+
+.navbar-nav a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: calc(100% - 30px);
+    bottom: 10px;
+    transition: all 0.3s ease-out;
+    background: #68C3A3;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+}
+
+.navbar-nav a:hover:after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .navbar-custom {
@@ -571,13 +582,13 @@ SOCIAL ICON
 .biography{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border:1px solid #EEEEEE;
+    border:1px solid #68c3a3;
     position: relative;
 }
 
 .biography::after{
     content: "";
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid #68c3a3;
     position: absolute;
     bottom: -3px;
     width: 100%;
@@ -589,6 +600,7 @@ SOCIAL ICON
     position: relative;
     background: url(../../assets/images/photo-frame.png) bottom center no-repeat;
     background-size: contain;
+    padding-left: 1px;
 }
 
 .myphoto img{
@@ -619,6 +631,16 @@ Resume Timeline
 .resume-title h3{
     text-align: center;
 }
+.resume-title h3:hover {
+    text-decoration: underline #68C3A3;
+    text-underline-offset: 3px;
+    background: none repeat scroll 0 0 transparent;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.resume-title h3:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
 .resume-section > div > div{
     margin-bottom: 60px;
 }
@@ -641,7 +663,7 @@ Resume Timeline
 .resume:before{
     content: "";
     position: absolute;
-    top: -12px;
+    top: -8px;
     width: 10px;
     height: 10px;
     background-color: #68C3A3;
@@ -657,7 +679,7 @@ Resume Timeline
 .resume:after{
     content: "";
     position: absolute;
-    bottom: -12px;
+    bottom: -8px;
     width: 10px;
     height: 10px;
     background-color: #68c3a3;
@@ -802,7 +824,8 @@ Resume Timeline
 .timeline-content{
     position: relative;
     padding: 24px;
-    background-color: #fff;
+    background-color: rgb(243, 247, 245);
+    border: 1px solid #68c3a3;
     -webkit-transition:all 400ms;
     -moz-transition:all 400ms;
     -o-transition:all 400ms;
@@ -869,7 +892,7 @@ Resume Timeline
 .timeline>li .timeline-panel::after {
     left: 100%;
     margin-left: -2px;
-    border-left: 12px solid #FFFFFF;
+    border-left: 12px solid #68C3A3;
     -webkit-transition:all 400ms;
     -moz-transition:all 400ms;
     -o-transition:all 400ms;
@@ -882,7 +905,7 @@ Resume Timeline
 .timeline>li.timeline-inverted .timeline-panel::after {
     right: 100%;
     margin-right:-2px;
-    border-right: 12px solid #FFFFFF;
+    border-right: 12px solid #68C3A3;
     -webkit-transition:all 400ms;
     -moz-transition:all 400ms;
     -o-transition:all 400ms;
@@ -1395,6 +1418,8 @@ Icon for all respective meta
 .hire-section h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    word-spacing: 0.7rem;
+    line-height: 4rem;
 }
 
 .hire-section .btn {
@@ -1458,6 +1483,9 @@ Icon for all respective meta
     padding: 36px 0;
     color: #fff;
   
+}
+.span-footer {
+    color: #68C3A3;
 }
 .copyright p {
     margin: 0;
@@ -1608,7 +1636,9 @@ Icon for all respective meta
 }
 
 .short-info h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    text-decoration: underline #68C3A3;
+    text-underline-offset: 3px;
 }
 
 .hobby-list-wrap h3{
