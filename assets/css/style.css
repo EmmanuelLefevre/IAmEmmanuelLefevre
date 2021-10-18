@@ -310,6 +310,41 @@ ul.list-check li::before {
     }
 }
 
+/* Background Animated */
+.gradient-text {
+    background: -webkit-linear-gradient(0deg, #68C3A3, #dddc83, #d300ff,#2700ff, #52b3d9);
+    background-position: left center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: phaser 3s infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes phaser {
+  0% { background-position: 0% 0; }
+  100% { background-position: 100% 0; }
+}
+
+/* Background Animated End*/
+
+/* Auto Typing Text */
+.typing-text-js::after {
+    content: "_";
+    margin-bottom: 1rem;
+    animation: flash 0.6s none infinite alternate;;
+}
+  
+@keyframes flash{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+}
+/* Auto Typing Text End */
+
 
 #home {
 	background: url(../images/background-banner-ayutthaya.jpg) no-repeat center center;
@@ -360,7 +395,7 @@ ul.list-check li::before {
 
 .intro-sub {
 	color: #fff;
-	font-size: 24px;
+	font-size: 3.5rem;
 	line-height: 32px;
 	font-weight: 700;
 	text-transform: uppercase;
