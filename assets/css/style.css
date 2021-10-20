@@ -310,22 +310,6 @@ ul.list-check li::before {
     }
 }
 
-/* Background Animated */
-.gradient-text {
-    background: -webkit-linear-gradient(0deg, #68C3A3, #dddc83, #d300ff,#2700ff, #52b3d9);
-    background-position: left center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: phaser 3s infinite;
-    animation-fill-mode: forwards;
-    animation-direction: alternate;
-}
-
-@keyframes phaser {
-  0% { background-position: 0% 0; }
-  100% { background-position: 100% 0; }
-}
-
 /* Background Animated End*/
 
 /* Auto Typing Text */
@@ -1248,6 +1232,7 @@ Resume Timeline
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   /* ideally, transition speed should match zoom duration */
   -webkit-transition: all 0.3s ease-out; 
   -moz-transition: all 0.3s ease-out; 
@@ -1299,9 +1284,6 @@ Resume Timeline
 }
 
 /* === Blog Section === */
-.latest-blog-section {
-  
-}
 .blog-post-wrapper {
     padding: 4px;
     border: 1px solid #eee;
@@ -1358,9 +1340,6 @@ Resume Timeline
 }
 .entry-header {
     padding: 0 12px;
-}
-.post-meta {
-
 }
 .the-category a {
     font-size: 12px;
@@ -1463,10 +1442,6 @@ Icon for all respective meta
 
 
 /* === Contact Section === */
-.contact-section  {
-  
-}
-
 .contact-strong {
     text-decoration: underline #68C3A3;
     text-underline-offset: 3px;
