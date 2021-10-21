@@ -619,7 +619,6 @@ SOCIAL ICON
     position: relative;
     background: url(../../assets/images/photo-frame.png) bottom center no-repeat;
     background-size: contain;
-    padding-left: 1px;
 }
 
 .myphoto img{
