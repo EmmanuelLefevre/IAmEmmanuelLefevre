@@ -25,6 +25,7 @@
 	.navbar-custom .navbar-nav > li > a,
 	.navbar-custom .navbar-nav .dropdown-menu > li > a {
 		padding:10px 15px;
+		overflow: hidden;
 	}
 
 	.navbar-custom .dropdown-menu{
@@ -33,6 +34,7 @@
 	
 	.navbar-nav a:after {
 		transform: unset;
+		background: none;
 	}
 	.navbar-nav a:hover:after {
 		transform: unset;
@@ -183,6 +185,7 @@
 	.navbar-custom .navbar-nav > li > a,
 	.navbar-custom .navbar-nav .dropdown-menu > li > a {
 		padding:10px 15px;
+		overflow: hidden;
 	}
 
 	.navbar-custom .dropdown-menu{
@@ -317,9 +320,11 @@
 
 	.navbar-nav a:after {
 		transform: unset;
+		background: none;
 	}
 	.navbar-nav a:hover:after {
 		transform: unset;
+		background: none;
 	}
 
 	/*about me section*/
