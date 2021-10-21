@@ -1,5 +1,16 @@
 /* Extra small devices (phones, less than 768px) */
 @media (max-width : 766px) {
+	.intro-sub {
+		margin-top: 2rem;
+	}
+	.intro {
+		height: 100%;
+		padding-top: 3rem;
+	}
+	.responsive-h1 {
+		display: flex;
+		flex-direction: column;
+	}
 	.intro h1 {
 		font-size: 40px;
 		line-height: 40px;
@@ -51,7 +62,11 @@
 	}
 
 	.download-button .btn{
+		display: block;
 		margin-bottom: 20px;
+	}
+	.download-button a {
+		margin-right: 0px;
 	}
 
 
@@ -164,7 +179,10 @@
 		font-size: 60px;
 		line-height: 80px;
 	}
-	
+	.responsive-h1 {
+		display: flex;
+		flex-direction: column;
+	}
 	.social-icons ul{
 		margin-left: -5px;
 	}
@@ -308,6 +326,10 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width : 768px) and (max-width : 991px) {
+	.responsive-h1 {
+		display: flex;
+		flex-direction: column;
+	}
 	.navbar-custom .navbar-brand{
 		padding: 10px 15px;
 	}

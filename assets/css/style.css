@@ -306,11 +306,9 @@ ul.list-check li::before {
 /* === HOME === */
 @media (max-width : 640px) {
     .tt-fullHeight{
-        height: 560px !important;
+        height: 670px !important;
     }
 }
-
-/* Background Animated End*/
 
 /* Auto Typing Text */
 .typing-text-js::after {
