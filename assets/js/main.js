@@ -68,12 +68,3 @@ function setTyper(element, words) {
 
   }
 }
-
-/* Media Queries less than 768px */
-// $(window).resize(function(){
-//   If($(window).width()<640){
-//    $('.typing-text-js').document.createElement('br');;
-//   }
-//  });
-
-/* TYPING TEXT JS END */

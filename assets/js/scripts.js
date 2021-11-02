@@ -1,10 +1,4 @@
 /*
-Theme Name: IAMX
-Author: Trendy Theme
-Author URL: trendytheme.net
-*/
-
-/*
     = Preloader
     = Animated scrolling / Scroll Up
     = Full Screen Slider
@@ -327,7 +321,7 @@ jQuery(function ($) {
     // -------------------------------------------------------------
 
     (function () {
-        var myLatlng = new google.maps.LatLng(41.372641, -74.687387);
+        var myLatlng = new google.maps.LatLng(45.139429, -0.446113);
 
             var styles = [
                 {
@@ -361,7 +355,7 @@ jQuery(function ($) {
             ];
 
             var mapOptions = {
-                zoom: 15,
+                zoom: 8,
                 scrollwheel: false,
                 center: myLatlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
