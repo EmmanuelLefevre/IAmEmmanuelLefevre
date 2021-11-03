@@ -1,7 +1,7 @@
 /*
     = Preloader
-    = Animated scrolling / Scroll Up
     = Full Screen Slider
+    = Typing Text JS
     = Sticky Menu
     = Back To Top
     = Countup
@@ -9,10 +9,7 @@
     = More skill
     = Shuffle
     = Magnific Popup
-    = Vidio auto play
-    = Fit Vids
     = Google Map
-
 */
 
 jQuery(function ($) {
@@ -30,23 +27,6 @@ jQuery(function ($) {
 
 
 
-
-    // -------------------------------------------------------------
-    // Animated scrolling / Scroll Up
-    // -------------------------------------------------------------
-
-    (function () {
-        $('a[href*=#]').bind("click", function(e){
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top
-            }, 1000);
-            e.preventDefault();
-        });
-    }());
-
-
-
     // -------------------------------------------------------------
     // Full Screen Slider
     // -------------------------------------------------------------
@@ -58,6 +38,83 @@ jQuery(function ($) {
         });
 
     }());
+
+
+
+    // -------------------------------------------------------------
+    // Typing Text JS
+    // -------------------------------------------------------------
+
+    // get the element
+    const text = document.querySelector('.typing-text-js');
+
+    // make a words array
+    const words = [
+    "Applicatif",
+    "Web"
+    ];
+
+    // start typing effect
+    setTyper(text, words);
+
+    function setTyper(element, words) {
+
+    const LETTER_TYPE_DELAY = 75;
+    const WORD_STAY_DELAY = 2000;
+
+    const DIRECTION_FORWARDS = 0;
+    const DIRECTION_BACKWARDS = 1;
+
+    var direction = DIRECTION_FORWARDS;
+    var wordIndex = 0;
+    var letterIndex = 0;
+
+    var wordTypeInterval;
+
+    startTyping();
+
+    function startTyping() {
+        wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
+    }
+
+    function typeLetter() {
+        const word = words[wordIndex];
+
+        if (direction == DIRECTION_FORWARDS) {
+        letterIndex++;
+
+        if (letterIndex == word.length) {
+            direction = DIRECTION_BACKWARDS;
+            clearInterval(wordTypeInterval);
+            setTimeout(startTyping, WORD_STAY_DELAY);
+        }
+
+        } else if (direction == DIRECTION_BACKWARDS) {
+        letterIndex--;
+
+        if (letterIndex == 0) {
+            nextWord();
+        }
+        }
+
+        const textToType = word.substring(0, letterIndex);
+
+        element.textContent = textToType;
+    }
+
+    function nextWord() {
+
+        letterIndex = 0;
+        direction = DIRECTION_FORWARDS;
+        wordIndex++;
+
+        if (wordIndex == words.length) {
+        wordIndex = 0;
+        }
+
+    }
+    }
+
 
 
     // -------------------------------------------------------------
@@ -77,7 +134,6 @@ jQuery(function ($) {
 
 
 
-
     // -------------------------------------------------------------
     // Back To Top
     // -------------------------------------------------------------
@@ -91,6 +147,7 @@ jQuery(function ($) {
             }
         });
     }());
+
 
 
     // -------------------------------------------------------------
@@ -113,6 +170,7 @@ jQuery(function ($) {
     });
 
 
+
     // -------------------------------------------------------------
     // Progress Bar
     // -------------------------------------------------------------
@@ -126,6 +184,8 @@ jQuery(function ($) {
         }
     });
     
+
+
     // -------------------------------------------------------------
     // More skill
     // -------------------------------------------------------------
@@ -149,6 +209,7 @@ jQuery(function ($) {
             $(this).unbind('inview');
         }
     });
+
 
 
     // -------------------------------------------------------------
@@ -182,6 +243,7 @@ jQuery(function ($) {
     }());
 
 
+
     // -------------------------------------------------------------
     // Magnific Popup
     // -------------------------------------------------------------
@@ -199,8 +261,6 @@ jQuery(function ($) {
 
     }());
 
-
-
     (function () {
         $('.popup-video').magnificPopup({
             disableOn: 700,
@@ -211,40 +271,6 @@ jQuery(function ($) {
             fixedContentPos: false
         });
     }());
-
-
-
-
-
-    // -------------------------------------------------------------
-    // Fit Vids
-    // -------------------------------------------------------------
-    (function () {
-        $(".video-container").fitVids();
-    }());
-
-
-
-    // -------------------------------------------------------------
-    // Vidio auto play
-    // -------------------------------------------------------------
-    (function () {
-    
-    /* Vimeo API: http://developer.vimeo.com/player/js-api */
-    
-        var iframe = document.getElementById('nofocusvideo');
-        // $f == Froogaloop
-        var player = $f(iframe);
-
-        $('.modal').on('hidden.bs.modal', function () {
-        player.api('pause');
-        })
-
-        $('.modal').on('shown.bs.modal', function () {
-        player.api('play');
-        })
-    }());
-
 
 
 
@@ -264,6 +290,7 @@ jQuery(function ($) {
         }
 
     });
+
 
 
     // -------------------------------------------------------------
@@ -312,7 +339,6 @@ jQuery(function ($) {
         }, "json");
 
     });
-
 
 
 
@@ -368,7 +394,7 @@ jQuery(function ($) {
                 position: myLatlng,
                 map: map,
                 animation: google.maps.Animation.DROP,
-                title: 'Hello World!'
+                title: 'Saint-Savin'
             });
 
             var contentString = '' +
