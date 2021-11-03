@@ -1471,13 +1471,15 @@ Icon for all respective meta
     font-weight: 400;
     margin-bottom: 45px
 }
+.fa-map-marker, .fa-mobile {
+    color:#68C3A3;
+}
 
 
 /*MAP*/
 .location-map {
     padding: 4px;
-    border: 1px solid #eee;
-    border-bottom: 3px double #eee;
+    border: 1px solid #68C3A3;
 }
 .map-canvas {
     height: 350px;
