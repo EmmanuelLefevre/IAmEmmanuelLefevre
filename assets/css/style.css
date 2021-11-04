@@ -1251,7 +1251,6 @@ Resume Timeline
 
 
 
-
 /* === Facts Section === */
 .facts-section {
     background: url(../../assets/images/SunSet.jpg) no-repeat center center;
@@ -1279,6 +1278,23 @@ Resume Timeline
     font-weight: 700;
     margin: 0;
 }
+
+.fill-hover {
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(to right, #68c3a3 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 2.5s ease;
+}
+.fill-hover:hover {
+    background-position: 0 100%;
+}
+
+
 
 /* === Blog Section === */
 .blog-post-wrapper {
@@ -1473,6 +1489,16 @@ Icon for all respective meta
 }
 .fa-map-marker, .fa-mobile {
     color:#68C3A3;
+}
+.fa-mobile-footer {
+    font-size: 3rem;
+}
+.footer-tel {
+    display: flex;
+    justify-content: center;
+}
+.tel-number {
+    margin: auto;
 }
 
 

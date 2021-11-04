@@ -347,6 +347,7 @@ jQuery(function ($) {
     // -------------------------------------------------------------
 
     (function () {
+        // On initialise la latitude et la longitude de Saint-Savin (centre de la carte)
         var myLatlng = new google.maps.LatLng(45.139429, -0.446113);
 
             var styles = [
@@ -384,8 +385,20 @@ jQuery(function ($) {
                 zoom: 8,
                 scrollwheel: false,
                 center: myLatlng,
+                // Nous définissons le type de carte (ici carte routière)
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
-                disableDefaultUI: true,
+                // Nous activons les options de contrôle de la carte (plan, satellite...)
+                mapTypeControl: true,
+                // Cette option sert à définir comment les options se placent
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR 
+                },
+                // Activation des options de navigation dans la carte (zoom...)
+				navigationControl: true,
+                // Comment ces options doivent-elles s'afficher
+				navigationControlOptions: {
+						style: google.maps.NavigationControlStyle.ZOOM_PAN 
+					},
                 styles: styles
             }
             var map = new google.maps.Map(document.getElementById('mapCanvas'), mapOptions);
