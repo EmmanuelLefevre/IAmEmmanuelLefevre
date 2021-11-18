@@ -1,4 +1,5 @@
 /*
+    = MAP
     = Preloader
     = Full Screen Slider
     = Typing Text JS
@@ -9,8 +10,35 @@
     = More skill
     = Shuffle
     = Magnific Popup
-    = Google Map
 */
+
+
+/* ---------------------------------------------- /*
+    * MAP
+/* ---------------------------------------------- */
+
+var mymap = L.map('mapCanvas').setView([43.833328, -0.56667], 9);
+
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    minZoom: 1,
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+
+var marqueur = L.marker([45.139429, -0.446113]).addTo(mymap);
+marqueur.bindPopup("<p>"+ 'Saint-Savin '+"</p>").openPopup();
+var circle = L.circle([44.838180, -0.57900], {
+    color: 'rgba(255, 0, 0, 0.7)',
+    fillColor: '#f03',
+    fillOpacity: 0.35,
+    radius: 12000
+}).addTo(mymap);
+
+
 
 jQuery(function ($) {
 
@@ -340,94 +368,4 @@ jQuery(function ($) {
 
     });
 
-
-
-    // -------------------------------------------------------------
-    // Google Map
-    // -------------------------------------------------------------
-
-    (function () {
-        // On initialise la latitude et la longitude de Saint-Savin (centre de la carte)
-        var myLatlng = new google.maps.LatLng(45.139429, -0.446113);
-
-            var styles = [
-                {
-                    featureType: "landscape",
-                    stylers: [
-                        { color: '#f7f7f7' }
-                    ]
-                },{
-                    featureType: "natural",
-                    stylers: [
-                        { hue: '#00ffe6' }
-                    ]
-                },{
-                    featureType: "road",
-                    stylers: [
-                        { hue: '#fff' },
-                        { saturation: -70 }
-                    ]
-                },{
-                    featureType: "building",
-                    elementType: "labels",
-                    stylers: [
-                        { hue: '' }
-                    ]
-                },{
-                    featureType: "poi", //points of interest
-                    stylers: [
-                        { hue: '' }
-                    ]
-                }
-            ];
-
-            var mapOptions = {
-                zoom: 8,
-                scrollwheel: false,
-                center: myLatlng,
-                // Nous définissons le type de carte (ici carte routière)
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                // Nous activons les options de contrôle de la carte (plan, satellite...)
-                mapTypeControl: true,
-                // Cette option sert à définir comment les options se placent
-                mapTypeControlOptions: {
-                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR 
-                },
-                // Activation des options de navigation dans la carte (zoom...)
-				navigationControl: true,
-                // Comment ces options doivent-elles s'afficher
-				navigationControlOptions: {
-						style: google.maps.NavigationControlStyle.ZOOM_PAN 
-					},
-                styles: styles
-            }
-            var map = new google.maps.Map(document.getElementById('mapCanvas'), mapOptions);
-
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                animation: google.maps.Animation.DROP,
-                title: 'Saint-Savin'
-            });
-
-            var contentString = '' +
-                    '' +
-                    '';
-
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.open(map, marker);
-            });
-
-    }());
-
-
 });
-
-
-
-
-
