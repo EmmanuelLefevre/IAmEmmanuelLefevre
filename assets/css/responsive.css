@@ -138,6 +138,17 @@
 		text-align: center;
 	}
 
+	/* Bouton Scroll to top */
+	.scroll-up {
+		bottom: 2rem;
+		right: 2rem;
+	}
+	.scroll-up a {
+		font-size: 2rem;
+		width: 4rem;
+		height: 4rem;
+	}
+
 	/*service*/
 	.service-wrap > div{
 		margin-bottom:100px;
