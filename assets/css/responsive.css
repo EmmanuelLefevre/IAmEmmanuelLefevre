@@ -21,7 +21,8 @@
 	}
 
 	.social-icons li{
-		padding:0;
+		padding: 0;
+		margin: 5px;
 	}
 
 	.social-icons a i{
@@ -107,6 +108,11 @@
 
 	#filter li{
 		margin-bottom: 20px;
+	}
+	.facts-timer-icon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	/*blog section*/
@@ -220,6 +226,9 @@
 		display: flex;
 		justify-content: center;
 		width: 50%;
+	}
+	.download-button {
+		text-align: center;
 	}
 
 
@@ -355,6 +364,9 @@
 		display: flex;
 		justify-content: center;
 		width: 50%;
+	}
+	.download-button {
+		text-align: center;
 	}
 	
 
