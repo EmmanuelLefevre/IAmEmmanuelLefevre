@@ -1500,6 +1500,11 @@ Icon for all respective meta
 .tel-number {
     margin: auto;
 }
+.captcha {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+}
 
 
 /*MAP*/

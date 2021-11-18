@@ -408,15 +408,18 @@
 
 	.contact-section .map-icon, 
 	.contact-section .mobile-icon {
-		float: left;
+		float: right;
 	}
 	.center-xs {
 		text-align: left;
 	}
 
-
 	.portfolio-item{
 		min-height: 162px;
+	}
+
+	.div-contact {
+		padding: 2rem 0 0 0;
 	}
 
 	/*service*/

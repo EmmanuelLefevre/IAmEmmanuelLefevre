@@ -28,6 +28,8 @@
   <link href="assets/css/responsive.css" rel="stylesheet">
   <!--Main JavaScript-->
   <script defer src="assets/js/scripts.js"></script>
+  <!-- Javascript Google Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!--OpenMapStreet CSS-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" 
@@ -981,6 +983,7 @@
                 </div>
 
                 <div class="text-center">
+                  <div class="g-recaptcha captcha" data-sitekey="6LfU0kIdAAAAAF4AeSRZjCUUOG2LvaLMCH8m1FEv"></div>
                   <button type="submit" name="submit" class="btn btn-primary">Envoyer Message</button>
                 </div>
               </form>
@@ -988,7 +991,9 @@
           </div><!-- /.col-md-6 -->
 
           <div class="col-md-6">
-            <div class="row center-xs">
+
+            <div class="row center-xs div-contact">
+
               <div class="col-sm-6">
                 <i class="fa fa-map-marker"></i>
                 <address>
@@ -1004,17 +1009,19 @@
                   (0033) 7859 82506
                 </div>
               </div>
+              
             </div>
 
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="location-map">
-                <div id="mapCanvas" class="map-canvas"></div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="location-map">
+                  <div id="mapCanvas" class="map-canvas"></div>
+                </div>
               </div>
             </div>
-          </div>
 
           </div>
+
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- End Contact Section -->
@@ -1053,7 +1060,6 @@
   <script src="assets/js/jquery.easypiechart.js"></script>
   <script src="assets/js/jquery.shuffle.min.js"></script>
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMkLxQZtkGc1suhhyVuJywCSlgrUmubqw"></script>
   <!--OpenMapStreet JS-->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" 
