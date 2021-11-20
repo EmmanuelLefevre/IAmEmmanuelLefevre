@@ -1,6 +1,30 @@
 @charset "UTF-8";
 
-/* Background Animated */
+/* Main Animation */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+          animation: fadeIn ease 4s;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+/* Main Animation End */
+
+
+/* Name Animation */
 .gradient-text {
   background: linear-gradient(90deg, #68c3a3 20%, #d5e25d, 40%, #52b3d9 60%, #682e88 80%, #a9ab87 100%);
   background-size: 600% 600%;
@@ -20,8 +44,8 @@
     background-position: 100%;
   }
 }
+/* Name Animation End */
 
-/* Background Animated End */
 
 /*
 Animate.css - http://daneden.me/animate
@@ -1082,24 +1106,6 @@ Copyright (c) 2014 Daniel Eden
   100% {opacity: 1;}
 }
 
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
 
 @keyframes fadeInDown {
   0% {
