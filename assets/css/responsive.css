@@ -115,11 +115,6 @@
 		align-items: center;
 	}
 
-	/*blog section*/
-	.blog-post-wrapper {
-		margin-bottom: 40px;
-	}
-
 	/*hire us section*/
 	.hire-section h2 {
 		line-height: 40px;
@@ -274,11 +269,6 @@
 		margin-bottom: 40px;
 	}
 
-	/*blog section*/
-	.blog-post-wrapper {
-		margin-bottom: 40px;
-	}
-
 	/*hire us section*/
 	.hire-section h2 {
 		line-height: 40px;
@@ -390,11 +380,6 @@
 	/*skill section*/
 	.skill-title h3 {
 		font-size: 14px;
-	}
-
-	/*blog section*/
-	.blog-post-wrapper {
-		margin-bottom: 40px;
 	}
 
 	.entry-meta ul li{

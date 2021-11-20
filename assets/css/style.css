@@ -6,15 +6,14 @@
     3. Home
     4. Navigation
     5. About
-    6. Resume
-    7. Skill
+    6. Skill
+    7. Resume
     8. Chart
-    9. Work
-    10. Facts
-    11. Blogs
-    12. Hire
-    13. Contact
-    14. Footer
+    9. Facts
+    10. Works
+    11. Hire
+    12. Contact
+    13. Footer
 -------------------------------------
 =====================================
 */
@@ -273,7 +272,7 @@ ul.list-check li::before {
 
 /* === MAIN === */
 .section-padding {
-	padding: 120px 0 100px;
+	padding: 60px 0 100px;
 }
 
 
@@ -567,8 +566,11 @@ SOCIAL ICON
 
 
 /* === About Section === */
+.section-padding-about {
+	padding: 100px 0 100px;
+}
 .reset-padding-bottom {
-    padding-bottom: 0;
+    padding-bottom: 10rem;
 }
 .short-info {
     margin-bottom: 40px;
@@ -595,7 +597,10 @@ SOCIAL ICON
 .download-button a i {
     margin-right: 10px;
 }
-
+.photo-about {
+    padding-right: 0px;
+    padding-left: 0px;
+}
 .biography{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -636,6 +641,81 @@ SOCIAL ICON
 
 .biography ul li:last-child{
     border-bottom:0;
+}
+
+
+/* === Skill Section === */
+.skills-section {
+    background-color: #1a1e23;
+    color: #fff;   
+}
+.skills-section .section-title{
+    color: #68C3A3;
+    margin-bottom: 110px;  
+}
+.skills-section .section-title h2{
+    color: #fff;
+}
+.skill-title {
+    width: 25%;
+    float: left;
+}
+.skill-title h3{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -6px;
+    text-transform: capitalize;
+}
+
+
+
+/* progress-bar */
+
+.skill-progress {
+    position: relative;
+}
+.progress {
+    height: 10px;
+    margin-bottom: 40px;
+    background-color: #3a4149;
+    border-radius: 3px;
+    box-shadow: none;
+    width: 75%;
+}
+
+.progress-bar {
+    background-color: #68c3a3;
+}
+.progress-bar span{
+    position: absolute;
+    top: -20px;
+    right: 15px;
+}
+
+.progress .progress-bar.six-sec-ease-in-out {
+    -webkit-transition: width 2s ease-in-out;
+    -moz-transition: width 2s ease-in-out;
+    -o-transition: width 2s ease-in-out;
+    transition:  width 2s ease-in-out;
+}
+
+
+.skill-chart h3 {
+    margin-top: 20px;
+}
+
+.our-progress{
+    margin:10px 0 30px;
+}
+
+.progress-percent{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our-progress h3{
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 
@@ -809,218 +889,136 @@ Resume Timeline
     margin-bottom: 20px;
 }
 
-
-
-
-
 @media(min-width:992px) {
 .timeline:before {
     left: 50%;
-}
+    }
 
-.timeline>li {
-    margin-bottom: 15px;
-    min-height: 100px;
-}
+    .timeline>li {
+        margin-bottom: 15px;
+        min-height: 100px;
+    }
 
-.timeline>li .posted-date {
-    position: absolute;
-    text-align: center;
-    background-color: #fff;
-}
+    .timeline>li .posted-date {
+        position: absolute;
+        text-align: center;
+        background-color: #fff;
+    }
 
-.timeline>li .timeline-panel {
-    float: left;
-    width: 43%;
-    text-align: right;
-    border: 1px solid #eee;
-    position: relative;
-}
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 43%;
+        text-align: right;
+        border: 1px solid #eee;
+        position: relative;
+    }
 
-.timeline-content{
-    position: relative;
-    padding: 24px;
-    background-color: rgb(243, 247, 245);
-    border: 1px solid #68c3a3;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
+    .timeline-content{
+        position: relative;
+        padding: 24px;
+        background-color: rgb(243, 247, 245);
+        border: 1px solid #68c3a3;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
 
-.timeline-content::after{
-    border: 1px solid #eee;
-    width: 100%;
-    position: absolute;
-    content: "";
-    bottom: -3px;
-    height:10px;
-    left: 0;
-    z-index: -1;
-}
+    .timeline-content::after{
+        border: 1px solid #eee;
+        width: 100%;
+        position: absolute;
+        content: "";
+        bottom: -3px;
+        height:10px;
+        left: 0;
+        z-index: -1;
+    }
 
-.timeline>li .timeline-content:hover {
-    background: #68c3a3;
-    color: #fff;
-}
+    .timeline>li .timeline-content:hover {
+        background: #68c3a3;
+        color: #fff;
+    }
 
-.timeline>li .timeline-panel::before,
-.timeline>li.timeline-inverted .timeline-panel::before {
-    content: "";
-    top: 25px;
-    position: absolute;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-.timeline>li .timeline-panel::before {
-    left: 100%;
-    border-left: 12px solid #ECECEC;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-.timeline>li .timeline-panel:hover::before {
-    border-left: 12px solid #68c3a3;
-}
+    .timeline>li .timeline-panel::before,
+    .timeline>li.timeline-inverted .timeline-panel::before {
+        content: "";
+        top: 25px;
+        position: absolute;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    .timeline>li .timeline-panel::before {
+        left: 100%;
+        border-left: 12px solid #ECECEC;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    .timeline>li .timeline-panel:hover::before {
+        border-left: 12px solid #68c3a3;
+    }
 
-.timeline>li.timeline-inverted .timeline-panel::before {
-    right: 100%;
-    border-right: 12px solid #ECECEC;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-.timeline>li.timeline-inverted .timeline-panel:hover::before {
-    border-right: 12px solid #68c3a3;
-    border-left: 0;
-}
+    .timeline>li.timeline-inverted .timeline-panel::before {
+        right: 100%;
+        border-right: 12px solid #ECECEC;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    .timeline>li.timeline-inverted .timeline-panel:hover::before {
+        border-right: 12px solid #68c3a3;
+        border-left: 0;
+    }
 
-.timeline>li .timeline-panel::after,
-.timeline>li.timeline-inverted .timeline-panel::after {
-    content: "";
-    top: 25px;
-    position: absolute;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-.timeline>li .timeline-panel::after {
-    left: 100%;
-    margin-left: -2px;
-    border-left: 12px solid #68C3A3;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-.timeline>li .timeline-panel:hover::after {
-    border-left: 12px solid #68c3a3;
-}
+    .timeline>li .timeline-panel::after,
+    .timeline>li.timeline-inverted .timeline-panel::after {
+        content: "";
+        top: 25px;
+        position: absolute;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+    .timeline>li .timeline-panel::after {
+        left: 100%;
+        margin-left: -2px;
+        border-left: 12px solid #68C3A3;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    .timeline>li .timeline-panel:hover::after {
+        border-left: 12px solid #68c3a3;
+    }
 
-.timeline>li.timeline-inverted .timeline-panel::after {
-    right: 100%;
-    margin-right:-2px;
-    border-right: 12px solid #68C3A3;
-    -webkit-transition:all 400ms;
-    -moz-transition:all 400ms;
-    -o-transition:all 400ms;
-    transition: all 400ms;
-}
-.timeline>li.timeline-inverted .timeline-panel:hover::after {
-    border-right: 12px solid #68c3a3;
-    border-left: 0;
-}
+    .timeline>li.timeline-inverted .timeline-panel::after {
+        right: 100%;
+        margin-right:-2px;
+        border-right: 12px solid #68C3A3;
+        -webkit-transition:all 400ms;
+        -moz-transition:all 400ms;
+        -o-transition:all 400ms;
+        transition: all 400ms;
+    }
+    .timeline>li.timeline-inverted .timeline-panel:hover::after {
+        border-right: 12px solid #68c3a3;
+        border-left: 0;
+    }
 
-.timeline>li .posted-date {
-    left: 50%;
-    width: 120px;
-    margin-left: -60px;
-    margin-top: 28px;
-}
-.timeline>li .posted-date .month {
-    float: none;
-}
+    .timeline>li .posted-date {
+        left: 50%;
+        width: 120px;
+        margin-left: -60px;
+        margin-top: 28px;
+    }
+    .timeline>li .posted-date .month {
+        float: none;
+    }
 
-
 }
-
-
-
-/* === Skill Section === */
-.skills-section {
-    background-color: #1a1e23;
-    color: #fff;   
-}
-.skills-section .section-title{
-    color: #68C3A3;
-    margin-bottom: 110px;  
-}
-.skills-section .section-title h2{
-    color: #fff;
-}
-.skill-title {
-    width: 25%;
-    float: left;
-}
-.skill-title h3{
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: -6px;
-    text-transform: capitalize;
-}
-
-
-
-/* progress-bar */
-
-.skill-progress {
-    position: relative;
-}
-.progress {
-    height: 10px;
-    margin-bottom: 40px;
-    background-color: #3a4149;
-    border-radius: 3px;
-    box-shadow: none;
-    width: 75%;
-}
-
-.progress-bar {
-    background-color: #68c3a3;
-}
-.progress-bar span{
-    position: absolute;
-    top: -20px;
-    right: 15px;
-}
-
-.progress .progress-bar.six-sec-ease-in-out {
-  -webkit-transition: width 2s ease-in-out;
-  -moz-transition: width 2s ease-in-out;
-  -o-transition: width 2s ease-in-out;
-  transition:  width 2s ease-in-out;
-}
-
-
-.skill-chart h3 {
-    margin-top: 20px;
-}
-
-.our-progress{
-    margin:10px 0 30px;
-}
-
-.progress-percent{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.our-progress h3{
-    font-weight: 400;
-    margin-bottom: 5px;
-}
-
 
 
 /* === Chart CSS  === */
@@ -1064,6 +1062,49 @@ Resume Timeline
 .angular .chart {margin-top:0;}
 .chart .chart-text h3{font-size:22px;}
 
+
+/* === Facts Section === */
+.facts-section {
+    background: url(../../assets/images/SunSet.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;  
+}
+
+.tt-overlay-bg {
+    background: rgba(26, 30, 35, 0.4);
+    padding: 110px 0;
+}
+
+.count-wrap i {
+    font-size: 64px;
+    margin-bottom: 25px;
+}
+.count-wrap h3 {
+    font-size: 50px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+.count-wrap p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.fill-hover {
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(to right, #68c3a3 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 2.5s ease;
+}
+.fill-hover:hover {
+    background-position: 0 100%;
+}
 
 
 /* === Work Section === */
@@ -1249,150 +1290,6 @@ Resume Timeline
   opacity: 0;
 }
 
-
-
-/* === Facts Section === */
-.facts-section {
-    background: url(../../assets/images/SunSet.jpg) no-repeat center center;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #fff;  
-}
-
-.tt-overlay-bg {
-    background: rgba(26, 30, 35, 0.4);
-    padding: 110px 0;
-}
-
-.count-wrap i {
-    font-size: 64px;
-    margin-bottom: 25px;
-}
-.count-wrap h3 {
-    font-size: 50px;
-    line-height: 28px;
-    margin-bottom: 20px;
-}
-.count-wrap p {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-}
-
-.fill-hover {
-    color: #fff;
-    overflow: hidden;
-    background: linear-gradient(to right, #68c3a3 50%, #fff 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 2.5s ease;
-}
-.fill-hover:hover {
-    background-position: 0 100%;
-}
-
-
-
-/* === Blog Section === */
-.blog-post-wrapper {
-    padding: 4px;
-    border: 1px solid #eee;
-    border-bottom: 3px double #eee;
-}
-
-.figure {
-    position: relative;
-}
-.figure i{
-    position: absolute;
-    bottom: -8px;
-    right: 30px;
-    color: #fff;
-    font-size: 18px;
-    z-index: 100;
-}
-.figure i:after {
-    position: absolute;
-    content: "";
-    left: -12px;
-    top: -10px;
-    width: 40px;
-    height: 40px;
-    background-color: #68c3a3;
-    z-index: -1;
-    border-radius: 3px;
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-}
-
-.post-thumbnail {
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-.post-thumbnail img{
-    opacity: 0.8;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-}
-.post-thumbnail img:hover {
-    opacity: 1;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    transform: scale(1.05);
-}
-.entry-header {
-    padding: 0 12px;
-}
-.the-category a {
-    font-size: 12px;
-    line-height: 28px;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-.entry-title {
-    font-size: 16px;
-    line-height: 25px;
-    font-weight: 700;
-}
-.entry-title a{
-    color: #282828;
-}
-.entry-title a:hover{
-    color: #68c3a3;
-}
-.entry-meta {
-    color: #afafaf;
-}
-.entry-meta ul {
-    margin-bottom: 10px;
-}
-.entry-meta ul li {
-    padding: 0 10px;
-}
-.entry-meta ul li a{
-    display: inline-block;
-    color: #BBBBBB;
-    font-weight: 400;
-}
-.entry-meta ul li a:hover{
-    color: #68c3a3;
-}
-
-.blog-more {
-    margin-top: 40px;
-}
 
 /*
 Icon for all respective meta
