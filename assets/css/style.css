@@ -1373,9 +1373,7 @@ Icon for all respective meta
 }
 
 .contact-section div > i{
-    float: left;
     font-size: 45px;
-    margin-right: 20px;
 }
 .contact-section address,
 .contact-section .contact-number {
