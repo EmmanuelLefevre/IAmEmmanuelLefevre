@@ -394,7 +394,7 @@ SOCIAL ICON
     position: relative;
     color: #fff;
     font-size: 18px;
-    margin: 0 7px;
+    margin: 0 20px;
     line-height: 40px;
     text-align: center;
     width: 40px;
@@ -413,7 +413,7 @@ SOCIAL ICON
     top: 0;
     width: 40px;
     height: 40px;
-    border: 1px solid #68C3A3;
+    border: 2px solid #68C3A3;
     border-radius: 3px;
     -webkit-transform: rotate(45deg);
        -moz-transform: rotate(45deg);
@@ -1382,10 +1382,11 @@ Icon for all respective meta
     font-weight: 400;
     margin-bottom: 45px
 }
-.fa-map-marker, .fa-mobile {
+.fa-map-marker, .fa-mobile, .fa-globe {
     color:#68C3A3;
 }
-.fa-mobile-footer {
+.fa-mobile-footer,
+.fa-globe-footer {
     font-size: 3rem;
 }
 .footer-tel {
@@ -1415,7 +1416,7 @@ Icon for all respective meta
 /* === Footer Wrapper === */
 .footer-wrapper {
     background: #1a1e23;
-    padding: 36px 0;
+    padding: 16px 0;
     color: #fff;
   
 }
@@ -1453,7 +1454,8 @@ Icon for all respective meta
 }
 
 .scroll-up a:hover,
-.scroll-up a:active {
+.scroll-up a:active,
+.scroll-up a:focus {
 	background-color: #fff;
 	color: #222;
     border: 0.3rem solid #68C3A3;
