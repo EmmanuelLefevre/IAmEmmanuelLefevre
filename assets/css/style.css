@@ -268,6 +268,15 @@ ul.list-check li::before {
     color: #68c3a3;
     margin-right: 10px;
 }
+.github {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-color: #68c3a3;
+    text-underline-offset: 3px;
+}
+.github:hover {
+    color: #68c3a3;
+}
 
 
 /* === MAIN === */
@@ -665,6 +674,16 @@ SOCIAL ICON
     font-weight: 400;
     margin-top: -6px;
     text-transform: capitalize;
+}
+.skill-chart {
+    margin-top: 40px;
+}
+.soft-skills {
+    margin-bottom: 55px !important;
+}
+.more-skill {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -1382,24 +1401,30 @@ Icon for all respective meta
     font-weight: 400;
     margin-bottom: 45px
 }
-.fa-map-marker, .fa-mobile, .fa-globe {
+.fa-map-marker, .fa-mobile, .fa-globe, .fa-github {
     color:#68C3A3;
 }
 .fa-mobile-footer,
-.fa-globe-footer {
+.fa-globe-footer,
+.fa-github-footer {
     font-size: 3rem;
 }
 .footer-tel {
     display: flex;
     justify-content: center;
 }
+.footer-github {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.footer-github:hover {
+    color: #68C3A3;
+    text-decoration-line: underline;
+    text-decoration-color: #68c3a3;
+    text-underline-offset: 3px;
+}
 .tel-number {
     margin: auto;
-}
-.captcha {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0 2rem 0;
 }
 
 

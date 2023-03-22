@@ -11,7 +11,6 @@
 
     $subject    = strip_tags($_POST['subject']);
     $email      = strip_tags($_POST['email']);
-    $phone      = strip_tags($_POST['phone']);
     $name       = strip_tags($_POST['name']);
     $message    = nl2br( htmlspecialchars($_POST['message'], ENT_QUOTES) );
     $result     = array();
@@ -26,10 +25,17 @@
 
     if(empty($email)){
 
-        $result = array( 'response' => 'error', 'empty'=>'email', 'message'=>'<strong>Erreur!</strong>&nbsp; ELe champ email est vide.' );
+        $result = array( 'response' => 'error', 'empty'=>'email', 'message'=>'<strong>Erreur!</strong>&nbsp; Le champ email est vide.' );
         echo json_encode($result );
         die;
     } 
+
+    if(empty($subject)){
+
+        $result = array( 'response' => 'error', 'empty'=>'message', 'message'=>'<strong>Erreur!</strong>&nbsp; Vous n\'avez saisi aucun message.' );
+        echo json_encode($result );
+        die;
+   }
 
     if(empty($message)){
 
@@ -50,8 +56,7 @@
         '{{subject}}' => $subject,
         '{{email}}'=>$email,
         '{{message}}'=>$message,
-        '{{name}}'=>$name,
-        '{{phone}}'=>$phone
+        '{{name}}'=>$name
         );
 
 
