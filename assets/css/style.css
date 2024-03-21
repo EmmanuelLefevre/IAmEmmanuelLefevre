@@ -53,6 +53,9 @@ a:hover {
     color: #333333;
     text-decoration: none;
 }
+a.site-link {
+    color: #68c3a3;
+}
 
 
 /* Transition elements
@@ -240,9 +243,9 @@ hr {
 /* LIST STYLE
 -------------------------------------------------- */
 ul, ol {
-    margin     : 0;
-    padding    : 0;
-    list-style : none
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 ul.list-check li{
@@ -952,6 +955,9 @@ Resume Timeline
     .timeline>li .timeline-content:hover {
         background: #68c3a3;
         color: #fff;
+    }
+    .timeline>li:hover .timeline-content a {
+        color: #333333;
     }
 
     .timeline>li .timeline-panel::before,
