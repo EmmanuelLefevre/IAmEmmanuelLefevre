@@ -19,8 +19,8 @@
 
 var mymap = L.map('mapCanvas').setView([43.833328, -0.56667], 9);
 
-L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
     minZoom: 1,
     maxZoom: 18,
     id: 'mapbox/streets-v11',
