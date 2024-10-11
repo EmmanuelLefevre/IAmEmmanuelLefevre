@@ -260,13 +260,13 @@ ul.list-check li::before {
     color: #68c3a3;
     margin-right: 10px;
 }
-.github {
+.git {
     color: inherit;
     text-decoration-line: underline;
     text-decoration-color: #68c3a3;
     text-underline-offset: 3px;
 }
-.github:hover {
+.git:hover {
     color: #68c3a3;
 }
 
