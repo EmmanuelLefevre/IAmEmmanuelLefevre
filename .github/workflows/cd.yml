@@ -18,7 +18,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SSH_PORT: ${{ secrets.SSH_PORT }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT }}
           SOURCE: "."
-          TARGET: "/home/ton-utilisateur/www/ton-site"
+          TARGET: ${{ secrets.TARGET_PATH }}
           ARGS: "-avz --delete"
