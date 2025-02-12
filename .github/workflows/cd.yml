@@ -14,6 +14,8 @@ jobs:
 
       - name: Show modified files
         run: |
+          echo "Commit Before: ${{ github.event.before }}"
+          echo "Commit After: ${{ github.sha }}"
           git diff --name-only ${{ github.event.before }} ${{ github.sha }}
 
       - name: Deploy project with SSH
