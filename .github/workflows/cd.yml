@@ -12,12 +12,17 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
 
+      - name: Show modified files
+        run: |
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+
       - name: Deploy project with SSH
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
           SOURCE: "."
           TARGET: "/home/ton-utilisateur/www/ton-site"
           ARGS: "-avz --delete"
