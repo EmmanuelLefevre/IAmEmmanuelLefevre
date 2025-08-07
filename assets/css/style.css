@@ -1395,7 +1395,7 @@ Resume Timeline
     font-size: 45px;
 }
 .contact-section address,
-.contact-section .contact-number {
+.contact-section {
     overflow: hidden;
     line-height: 30px;
     font-weight: 400;
