@@ -216,25 +216,125 @@ jQuery(function ($) {
   });
 
   // -------------------------------------------------------------
-  // More skill
+  // More skills ("Crazy" version)
   // -------------------------------------------------------------
-  $('.more-skill').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+  $('.more-skills').bind('inview', function(event, visible) {
     if (visible) {
-      $('.chart').easyPieChart({
-        //your configuration goes here
-        easing: 'easeOut',
-        delay: 3000,
-        barColor:'#68c3a3',
-        trackColor:'rgba(255,255,255,0.2)',
-        scaleColor: false,
-        lineWidth: 8,
-        size: 140,
-        animate: 2000,
-        onStep: function(from, to, percent) {
-          this.el.children[0].innerHTML = Math.round(percent);
+      $('.chart').each(function() {
+        var $chart = $(this);
+
+        if ($chart.data('isAnimating')) return;
+
+        var myTarget = $chart.data('percent');
+        var animSpeed = (myTarget == 200) ? 2000 : 500;
+
+        $chart.easyPieChart({
+          barColor: '#68c3a3',
+          trackColor: '#eee',
+          scaleColor: false,
+          lineWidth: 10,
+          size: 140,
+          animate: animSpeed,
+          onStep: function(from, to, percent) {
+            if (isNaN(percent)) percent = 0;
+
+            if ($chart.data('percent') == 200) {
+              $chart.find('.percent').text(Math.round(percent * 2));
+            }
+            else {
+              $chart.find('.percent').text(Math.round(percent));
+            }
+          },
+          onStop: function(from, to) {
+            if (to === 100 && $chart.data('percent') == 200) {
+              $chart.find('.percent, .chart-text').addClass('pulse-orange-active');
+              $chart.find('canvas').addClass('canvas-zoom-active');
+
+              var api = $chart.data('easyPieChart');
+              if (api) {
+                api.options.barColor = '#f39c12';
+                api.update(100);
+              }
+            }
+          }
+        });
+
+        var api = $chart.data('easyPieChart');
+
+        // ==========================================
+        // MOTIVATION Usecase (200%)
+        // ==========================================
+        if (myTarget == 200) {
+          api.update(0);
+          setTimeout(function() {
+            api.update(100);
+          }, 100);
+        }
+
+        // ==========================================
+        // SOFT SKILLS (Crazy Mode)
+        // ==========================================
+        else {
+          api.update(0);
+          setTimeout(function() {
+            api.update(100);
+          }, 100);
+
+          $chart.data('moveCount', 0);
+
+          var timer = setInterval(function() {
+            if (!$chart.data('isAnimating')) {
+              clearInterval(timer);
+              return;
+            }
+
+            var currentCount = $chart.data('moveCount') + 1;
+            $chart.data('moveCount', currentCount);
+
+            var $percentText = $chart.find('.percent');
+            var nextValue;
+
+            if (currentCount === 4) {
+              $percentText.addClass('pulse-green-active');
+              nextValue = 100
+            }
+            else if (currentCount === 5) {
+              $percentText.removeClass('pulse-green-active');
+              $chart.data('moveCount', 0);
+              nextValue = Math.floor(Math.random() * 65) + 35;
+            }
+            else {
+              nextValue = Math.floor(Math.random() * 65) + 35;
+            }
+
+            if ($chart.data('easyPieChart')) {
+              $chart.data('easyPieChart').update(nextValue);
+            }
+          }, 1200);
+
+          $chart.data('crazyTimer', timer);
         }
       });
-      $(this).unbind('inview');
+    }
+    // ==========================================
+    // RESET TOTAL (When out of view)
+    // ==========================================
+    else {
+      $('.chart').each(function() {
+        var $chart = $(this);
+
+        if ($chart.data('crazyTimer')) {
+          clearInterval($chart.data('crazyTimer'));
+          $this.removeData('crazyTimer');
+        }
+
+        $chart.find('.percent').text('0');
+        $chart.find('.percent, .chart-text').removeClass('pulse-green-active pulse-orange-active');
+        $chart.find('canvas').removeClass('canvas-zoom-active');
+
+        $chart.removeData('easyPieChart');
+        $chart.find('canvas').remove();
+      });
     }
   });
 
