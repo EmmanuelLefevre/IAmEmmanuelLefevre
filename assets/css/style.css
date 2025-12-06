@@ -1084,17 +1084,14 @@ Resume Timeline
 
 /* === Facts Section === */
 .facts-section {
-    background: url(../../assets/images/SunSet.jpg) no-repeat center center;
-    background-attachment: fixed;
+    background: url(../../assets/images/SunSet.jpg) no-repeat center 67%;
+    background-attachment: scroll;
     background-size: cover;
     color: #fff;
 }
-
 .tt-overlay-bg {
-    background: rgba(26, 30, 35, 0.4);
     padding: 110px 0;
 }
-
 .count-wrap i {
     font-size: 64px;
     margin-bottom: 25px;
@@ -1109,8 +1106,10 @@ Resume Timeline
     font-weight: 700;
     margin: 0;
 }
-
 .fill-hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #fff;
     overflow: hidden;
     background: linear-gradient(to right, #68c3a3 50%, #fff 50%);
@@ -1119,10 +1118,33 @@ Resume Timeline
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
     background-position: 100%;
-    transition: background-position 2.5s ease;
+    transition: background-position 1s ease;
+    cursor: default;
 }
 .fill-hover:hover {
     background-position: 0 100%;
+}
+.fill-hover.active-orange {
+    color: #68c3a3 !important;
+    -webkit-text-fill-color: #68c3a3 !important;
+    background: none !important;
+}
+.fill-hover:hover {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    background: none !important;
+}
+.timer {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.timer.timer-orange {
+    color: #68c3a3 !important;
+    -webkit-text-fill-color: #68c3a3 !important;
+    background: none !important;
+}
+.timer.timer-pop {
+    transform: scale(1.3);
 }
 
 
