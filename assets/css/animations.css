@@ -16,8 +16,40 @@
     opacity: 1;
   }
 }
-
 .pulse-green-active {
   animation: textPulseGreen 0.4s ease-in-out 3;
   color: #68c3a3 !important;
+}
+
+/* PULSE MOTIVATION */
+@keyframes textPulseOrange {
+  0% {
+    transform: scale(1);
+    color: inherit;
+    opacity: 1;
+  }
+  20% {
+    transform: scale(1.3);
+    color: #fa790f;
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    color: #fa790f;
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(1.3);
+    color: #fa790f;
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.3);
+    color: #fa790f;
+    opacity: 1;
+  }
+}
+.pulse-orange-active {
+  animation: textPulseOrange 0.8s ease-in-out forwards;
+  color: #fa790f !important;
 }
