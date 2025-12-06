@@ -723,6 +723,12 @@ ul.list-check li::before {
     font-weight: 400;
     margin-bottom: 5px;
 }
+.chart canvas {
+    transition: transform 0.8s ease-in-out;
+}
+.canvas-zoom-active {
+    transform: scale(1.1);
+}
 
 /* === Resume Section === */
 
