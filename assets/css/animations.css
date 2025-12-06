@@ -28,28 +28,27 @@
     color: inherit;
     opacity: 1;
   }
-  20% {
-    transform: scale(1.3);
-    color: #fe5000;
-    opacity: 0.8;
+  40% {
+    transform: scale(1.5);
+    color: #ff5c00;
+    opacity: 1;
   }
-  50% {
-    transform: scale(1);
-    color: #fe5000;
-    opacity: 0.8;
+  60% {
+    transform: scale(0.9);
+    color: #ff5c00;
+    opacity: 0.9;
   }
-  75% {
-    transform: scale(1.3);
-    color: #fe5000;
-    opacity: 0.8;
+  80% {
+    transform: scale(1.4);
+    color: #ff5c00;
   }
   100% {
     transform: scale(1.3);
-    color: #fe5000;
+    color: #ff5c00;
     opacity: 1;
   }
 }
 .pulse-orange-active {
-  animation: textPulseOrange 0.8s ease-in-out forwards;
-  color: #fe5000 !important;
+  animation: textPulseOrange 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+  color: #ff5c00 !important;
 }

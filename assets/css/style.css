@@ -724,10 +724,17 @@ ul.list-check li::before {
     margin-bottom: 5px;
 }
 .chart canvas {
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, filter 0.5s ease;
 }
 .canvas-zoom-active {
     transform: scale(1.1);
+}
+.canvas-green-filter {
+    filter: hue-rotate(90deg);
+}
+.finish-fluo-green {
+    color: #39ff14 !important;
+    transition: color 1.5s ease;
 }
 
 /* === Resume Section === */

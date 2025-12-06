@@ -254,18 +254,26 @@ jQuery(function ($) {
               if (api) {
                 api.options.animate = false;
 
-                api.options.barColor = '#fe5000';
+                api.options.barColor = '#ff5c00';
                 api.update(100);
               }
+
+              var greenTimer = setTimeout(function() {
+                $chart.find('.percent, .chart-text').addClass('finish-fluo-green');
+
+                if ($chart.data('easyPieChart')) {
+                  $chart.data('easyPieChart').options.barColor = '#39ff14';
+                  $chart.data('easyPieChart').update(100);
+                }
+              }, 800);
+              $chart.data('greenTimer', greenTimer);
             }
           }
         });
 
         var api = $chart.data('easyPieChart');
 
-        // ==========================================
         // MOTIVATION Usecase (200%)
-        // ==========================================
         if (myTarget == 200) {
           api.update(0);
           setTimeout(function() {
@@ -275,9 +283,7 @@ jQuery(function ($) {
           }, 100);
         }
 
-        // ==========================================
         // SOFT SKILLS (Crazy Mode)
-        // ==========================================
         else {
           api.update(0);
           setTimeout(function() {
@@ -323,9 +329,7 @@ jQuery(function ($) {
         }
       });
     }
-    // ==========================================
     // RESET TOTAL (When out of view)
-    // ==========================================
     else {
       $('.chart').each(function() {
         var $chart = $(this);
@@ -335,8 +339,14 @@ jQuery(function ($) {
           $chart.removeData('crazyTimer');
         }
 
+        if ($chart.data('greenTimer')) {
+          clearTimeout($chart.data('greenTimer'));
+          $chart.removeData('greenTimer');
+        }
+
         $chart.find('.percent').text('0');
-        $chart.find('.percent, .chart-text').removeClass('pulse-green-active pulse-orange-active');
+        $chart.find('.percent, .chart-text')
+            .removeClass('pulse-green-active pulse-orange-active finish-fluo-green');
         $chart.find('canvas').removeClass('canvas-zoom-active');
 
         $chart.removeData('easyPieChart');
