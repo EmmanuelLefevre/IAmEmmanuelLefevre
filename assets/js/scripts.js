@@ -182,7 +182,7 @@ jQuery(function ($) {
           },
           complete: function() {
             $this.text(targetVal);
-            $parentBlock.addClass('active-orange');
+            $parentBlock.addClass('active');
             $this.addClass('timer-pop');
             setTimeout(function() {
               $this.removeClass('timer-pop');
@@ -196,7 +196,7 @@ jQuery(function ($) {
         var $this = $(this);
         var $parentBlock = $this.closest('.fill-hover');
         $this.stop();
-        $parentBlock.removeClass('active-orange');
+        $parentBlock.removeClass('active');
         $this.removeClass('timer-pop');
         $this.text('0');
       });
@@ -223,7 +223,7 @@ jQuery(function ($) {
       $('.chart').each(function() {
         var $chart = $(this);
 
-        if ($chart.data('isAnimating')) return;
+        if ($chart.data('easyPieChart')) return;
 
         var myTarget = $chart.data('percent');
         var animSpeed = (myTarget == 200) ? 2000 : 500;
@@ -252,7 +252,9 @@ jQuery(function ($) {
 
               var api = $chart.data('easyPieChart');
               if (api) {
-                api.options.barColor = '#f39c12';
+                api.options.animate = false;
+
+                api.options.barColor = '#fe5000';
                 api.update(100);
               }
             }
@@ -267,7 +269,9 @@ jQuery(function ($) {
         if (myTarget == 200) {
           api.update(0);
           setTimeout(function() {
-            api.update(100);
+            if ($chart.data('easyPieChart')) {
+              api.update(100);
+            }
           }, 100);
         }
 
@@ -277,33 +281,36 @@ jQuery(function ($) {
         else {
           api.update(0);
           setTimeout(function() {
-            api.update(100);
+            if ($chart.data('easyPieChart')) {
+              api.update(100);
+            }
           }, 100);
 
           $chart.data('moveCount', 0);
 
           var timer = setInterval(function() {
-            if (!$chart.data('isAnimating')) {
+            if (!$chart.data('easyPieChart')) {
               clearInterval(timer);
               return;
             }
 
             var currentCount = $chart.data('moveCount') + 1;
-            $chart.data('moveCount', currentCount);
-
             var $percentText = $chart.find('.percent');
             var nextValue;
 
             if (currentCount === 4) {
               $percentText.addClass('pulse-green-active');
-              nextValue = 100
+              nextValue = 100;
+              $chart.data('moveCount', currentCount);
             }
             else if (currentCount === 5) {
               $percentText.removeClass('pulse-green-active');
-              $chart.data('moveCount', 0);
+              $chart.data('moveCount', 1);
               nextValue = Math.floor(Math.random() * 65) + 35;
             }
             else {
+              $percentText.removeClass('pulse-green-active');
+              $chart.data('moveCount', currentCount);
               nextValue = Math.floor(Math.random() * 65) + 35;
             }
 
@@ -325,7 +332,7 @@ jQuery(function ($) {
 
         if ($chart.data('crazyTimer')) {
           clearInterval($chart.data('crazyTimer'));
-          $this.removeData('crazyTimer');
+          $chart.removeData('crazyTimer');
         }
 
         $chart.find('.percent').text('0');

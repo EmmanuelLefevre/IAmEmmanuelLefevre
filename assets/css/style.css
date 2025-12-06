@@ -1126,7 +1126,7 @@ Resume Timeline
 .fill-hover:hover {
     background-position: 0 100%;
 }
-.fill-hover.active-orange {
+.fill-hover.active {
     color: #68c3a3 !important;
     -webkit-text-fill-color: #68c3a3 !important;
     background: none !important;
@@ -1139,11 +1139,6 @@ Resume Timeline
 .timer {
     display: inline-block;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.timer.timer-orange {
-    color: #68c3a3 !important;
-    -webkit-text-fill-color: #68c3a3 !important;
-    background: none !important;
 }
 .timer.timer-pop {
     transform: scale(1.3);
