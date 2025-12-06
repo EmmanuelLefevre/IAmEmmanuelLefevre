@@ -254,7 +254,7 @@ jQuery(function ($) {
               if (api) {
                 api.options.animate = false;
 
-                api.options.barColor = '#ff5c00';
+                api.options.barColor = '#e20000';
                 api.update(100);
               }
 
