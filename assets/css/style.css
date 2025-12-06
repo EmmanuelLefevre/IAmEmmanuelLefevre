@@ -1208,26 +1208,30 @@ Resume Timeline
 
 
 .links {
-    width: 90px;
+    width: auto;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
-    margin-top: -20px;
-    margin-left: -45px;
+    margin: 0;
     opacity: 0;
-    -webkit-transform: translate(0,-50px);
-    -moz-transform: translate(0,-50px);
-    -ms-transform: translate(0,-50px);
-    -o-transform: translate(0,-50px);
-    transform: translate(0,-50px);
+    -webkit-transform: translate(-50%, -50px);
+    -moz-transform: translate(-50%, -50px);
+    -ms-transform: translate(-50%, -50px);
+    -o-transform: translate(-50%, -50px);
+    transform: translate(-50%, -50px);
+    z-index: 10;
 }
 
-.links a i{
+.links a i {
+    display: block;
     position: relative;
     color: #68c3a3;
     font-size: 16px;
-    margin: 0 13px;
     z-index: 100;
 }
 .links a:hover i {
@@ -1264,14 +1268,16 @@ Resume Timeline
     text-align: center;
 }
 
-.portfolio:hover .tt-overlay,
+.portfolio:hover .tt-overlay {
+    opacity: 1;
+}
 .portfolio:hover .links {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -moz-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    -o-transform: translate(0,0);
-    transform: translate(0,0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 .portfolio:hover .portfolio-info{
     bottom: 0;
