@@ -6,7 +6,7 @@
     3. Home
     4. Navigation
     5. About
-    6. Skill
+    6. Skills
     7. Resume
     8. Chart
     9. Facts
@@ -650,7 +650,7 @@ ul.list-check li::before {
 }
 
 
-/* === Skill Section === */
+/* === More skills Section === */
 .skills-section {
     background-color: #1a1e23;
     color: #fff;
@@ -683,10 +683,7 @@ ul.list-check li::before {
     justify-content: center;
 }
 
-
-
 /* progress-bar */
-
 .skill-progress {
     position: relative;
 }
@@ -698,7 +695,6 @@ ul.list-check li::before {
     box-shadow: none;
     width: 75%;
 }
-
 .progress-bar {
     background-color: #68c3a3;
 }
@@ -707,33 +703,26 @@ ul.list-check li::before {
     top: -20px;
     right: 15px;
 }
-
 .progress .progress-bar.six-sec-ease-in-out {
     -webkit-transition: width 2s ease-in-out;
     -moz-transition: width 2s ease-in-out;
     -o-transition: width 2s ease-in-out;
     transition:  width 2s ease-in-out;
 }
-
-
 .skill-chart h3 {
     margin-top: 20px;
 }
-
 .our-progress{
     margin:10px 0 30px;
 }
-
 .progress-percent{
     margin-left: auto;
     margin-right: auto;
 }
-
 .our-progress h3{
     font-weight: 400;
     margin-bottom: 5px;
 }
-
 
 /* === Resume Section === */
 
