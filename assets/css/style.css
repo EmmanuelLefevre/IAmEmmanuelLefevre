@@ -28,6 +28,9 @@ body{
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased !important;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body, html{
     overflow-x:hidden;
@@ -1112,6 +1115,10 @@ Resume Timeline
     align-items: center;
     color: #fff;
     overflow: hidden;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+    padding: 10px;
     background: linear-gradient(to right, #68c3a3 50%, #fff 50%);
     background-clip: text;
     -webkit-background-clip: text;
