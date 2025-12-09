@@ -6,5 +6,5 @@
 
 
 <div align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username={emmanuellefevre}&theme={solarized}&exclude={exclude}"/>
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=emmanuellefevre&theme=github/>
 </div>
