@@ -575,7 +575,7 @@ ul.list-check li::before {
 }
 .short-info {
     margin-bottom: 40px;
-    margin-right: 10px;
+    margin-right: 0;
     text-align: justify;
 }
 
@@ -585,11 +585,15 @@ ul.list-check li::before {
 
 .short-info ul {
     margin-top: 10px;
-    display:inline-block;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .short-info ul li {
     width: 50%;
-    float: left;
 }
 
 /*download-button*/
