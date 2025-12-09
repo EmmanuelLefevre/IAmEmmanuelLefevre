@@ -362,8 +362,8 @@ jQuery(function ($) {
     var $grid = $('#grid');
 
     $grid.shuffle({
-        itemSelector: '.portfolio-item',
-        group: 'projects'
+      itemSelector: '.portfolio-item',
+      group: 'projects'
     });
 
     /* reshuffle when user clicks a filter item */
