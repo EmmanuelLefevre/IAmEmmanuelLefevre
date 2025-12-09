@@ -8,3 +8,5 @@
 <div align="center">
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=emmanuellefevre&theme=github/>
 </div>
+
+<img src="https://komarev.com/ghpvc/?username=lefevreemmanuel&style=for-the-badge&color=orange" alt=""/>
