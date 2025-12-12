@@ -89,6 +89,10 @@
 		margin-right: 10px;
 	}
 
+	.photo-about {
+		padding-left: 0px;
+	}
+
 
 	/*resume*/
 	.resume:before,
@@ -345,8 +349,6 @@
 		font-size: 14px;
 		margin-right: 20px;
 	}
-
-
 }
 
 

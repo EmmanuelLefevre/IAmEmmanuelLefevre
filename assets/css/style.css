@@ -574,7 +574,7 @@ ul.list-check li::before {
     padding-bottom: 10rem;
 }
 .short-info {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-right: 0;
     text-align: justify;
 }
@@ -595,6 +595,29 @@ ul.list-check li::before {
 .short-info ul li {
     width: 50%;
 }
+.short-info h4 {
+    color: #68C3A3;
+    font-size: 24px;
+    margin: 18px 0 10px 0;
+    text-transform: none;
+    font-variant: small-caps;
+}
+.short-info span {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline #68C3A3;
+    text-underline-offset: 3px;
+}
+.short-info div:last-of-type p:last-child {
+    margin-bottom: 40px;
+}
+.short-info p {
+    line-height: 1.7;
+}
+
+.specific-info + div span {
+    margin-top: 10px;
+}
 
 /*download-button*/
 .download-button {
@@ -609,7 +632,7 @@ ul.list-check li::before {
 }
 .photo-about {
     padding-right: 0px;
-    padding-left: 0px;
+    padding-left: 20px;
 }
 .biography{
     border-bottom-left-radius: 10px;
